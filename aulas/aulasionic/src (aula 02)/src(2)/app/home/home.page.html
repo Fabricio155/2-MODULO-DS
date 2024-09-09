@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      CALCULADORA
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-input label="Primeiro numero" labelPlacement="floating" placeholder="Digite o primeiro numero" [(ngModel)]="n1"type=number></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input label="Segundo  numero" labelPlacement="floating" placeholder="digite o segundo numero"[(ngModel)]="n2"type=number></ion-input>
+  </ion-item>
+  <ion-button expand="block"(click)="somar()">Somar</ion-button>
+   <label >{{res}}</label>
+</ion-content>
