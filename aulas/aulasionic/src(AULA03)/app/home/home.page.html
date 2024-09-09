@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-radio-group [(ngModel)]="selecionado" >
+    <ion-radio value="FEMININO" labelPlacement="end">FEMININO</ion-radio>
+    <ion-radio value="MASCULINO" labelPlacement="end">MASCULINO</ion-radio>
+  </ion-radio-group>
+
+  <ion-button id="present-alert" expand ="block" (click)="checarsexo()">verificar</ion-button>
+  <ion-label>{{"O SEXO É : "+sexo}}</ion-label>
+
+  <!-- <ion-alert
+  trigger="present-alert"
+  header="EXEMPLO ALERT"
+  subHeader="O SEXO ESCOLHIDO FOI "
+  message="{{sexo}}"
+  [buttons]="alertButtons"
+></ion-alert> -->
+
+<ion-toast
+trigger="present-alert"
+message="O SEXO É  {{sexo}}"
+[duration]="5000"
+
+></ion-toast>
+
+
+</ion-content>
