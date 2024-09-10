@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<ion-item>
+<ion-input label="Temperatura " placeholder="digite a temperatura que deseja converter"
+[(ngModel)]="temp"type="number"></ion-input>
+</ion-item>
+
+<ion-button expan="block" (click)="CemF()">Converter em Fº</ion-button>
+
+
+<ion-label>Conversão:{{resultadoc+" º fahrenheit "}}</ion-label>
+
+<ion-button expan="block" (click)="TemF()">Converter em Cº</ion-button>
+<ion-label>Conversão:{{resultadof+" º fahrenheit "}}</ion-label>
+
+
+</ion-content>

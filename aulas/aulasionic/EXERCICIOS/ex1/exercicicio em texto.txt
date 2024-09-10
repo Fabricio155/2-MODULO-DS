@@ -1,0 +1,25 @@
+resultadoc='';
+resultadof='';
+temp=0;
+CemF(){
+
+  this.resultadoc=((9*this.temp+160)/5).toFixed(1);
+
+}
+TemF(){
+  this.resultadof=((this.temp-32)*(5/9)).toFixed(1);
+}
+
+<ion-item>
+<ion-input label="Temperatura " placeholder="digite a temperatura que deseja converter"
+[(ngModel)]="temp"type="number"></ion-input>
+</ion-item>
+
+<ion-button expan="block" (click)="CemF()">Converter em Fº</ion-button>
+
+
+<ion-label>Conversão:{{resultadoc+" º fahrenheit "}}</ion-label>
+
+<ion-button expan="block" (click)="TemF()">Converter em Cº</ion-button>
+<ion-label>Conversão:{{resultadof+" º fahrenheit "}}</ion-label>
+
