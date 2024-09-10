@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<ion-item>
+<ion-input label="LADO 1" placeholder="1º LADO"
+[(ngModel)]="LADO1"type="number"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-input label="LADO 2" placeholder="2º LADO"
+  [(ngModel)]="LADO2"type="number"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input label="LADO 3" placeholder="3º LADO"
+    [(ngModel)]="LADO3"type="number"></ion-input>
+    </ion-item>
+
+<ion-button expan="block" (click)="triangulo()">Resultado</ion-button>
+
+
+<ion-label>{{resultado}}</ion-label>
+
+
+
+</ion-content>
