@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-input label="Digite o valor da sua compra "  labelPlacement="floating" placeholder="Enter text"[(ngModel)]="valor"></ion-input>
+  </ion-item>
+<ion-item>
+  <ion-label>Vamos calcular o  Desconto!</ion-label>
+</ion-item>
+  <ion-radio-group [(ngModel)]="selecionado" >
+    <ion-radio value="10" labelPlacement="end">10% DESCONTO</ion-radio><br>
+    <ion-radio value="20" labelPlacement="end">20% DESCONTO</ion-radio><br>
+    <ion-radio value="30" labelPlacement="end">30% DESCONTO</ion-radio><br>
+  </ion-radio-group>
+
+  <ion-button id="valor"  expand ="block" (click)="valorfinal()">VER VALOR COM DESCONTO</ion-button>
+  <ion-label>{{resultado}}</ion-label>
+
+  <ion-alert
+  trigger="valor"
+  header="  DESCONTÃO!!!  "
+  subHeader=""
+  message="O VALOR COM DESCONTO FOI R${{resultado}}"
+  [buttons]="alertButtons"
+></ion-alert>
+<ion-toast trigger="open-toast" message="This toast will disappear after 5 seconds" [duration]="5000"></ion-toast>
+
+</ion-content>
