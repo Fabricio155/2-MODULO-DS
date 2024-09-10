@@ -6,28 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  nota1: number =0;
-  nota2: number =0;
-  nota3: number =0;
-  nota4: number =0;
-  media: number =0;
-  resultado='';
-  
+km=0;
+VALOR=0;
+APP=0;
+CLIENTE=0;
 
-  conta(){  this.media= ((this.nota1+this.nota2+this.nota3+this.nota4) /4);
-    if (this.media >= 5.9) {
-      this.resultado = 'Aprovado';
-    } else if (this.media >= 3.1) {
-      this.resultado = 'Recuperação';
-    } else {
-      this.resultado = 'Reprovado';
-    }
-    
+cotacao(){
+  if(this.km<= 50){
+(this.VALOR=(this.km)*4.20).toFixed(2.1);
+  }else{
+    (this.VALOR=(this.km)*3.98).toFixed(2.1);
   }
-   
-   
-  constructor() {
-  
-  }
+  this.APP=(this.VALOR)*0.2;
+ (this.CLIENTE=this.VALOR+this.APP).toFixed(2.1);
+}
+  constructor() {}
 
 }
